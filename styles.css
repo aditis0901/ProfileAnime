@@ -1,0 +1,456 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+}
+.sidebar{
+    background-color: #010101;
+    z-index: 11;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('PLNT.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -10px 0; 
+    width: 20%;
+    height: 100%;
+}
+.gro{
+    color: #ffffff;
+    font-weight: 800;
+    box-sizing: border-box;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* notes */
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  left: 5%;
+  /* bottom: 50px; */
+  padding: 10px;
+  top: 10%;
+  z-index: 10;
+}
+.note {
+    margin-bottom: -20px;
+    width: 0;
+    height: 0;
+    padding: 50px 50px;
+    border: 2px solid grey;
+    /* box-shadow: 4px 8px 9px 6px; */
+    border-radius: 50%;
+    background-color: rgb(207, 200, 191);
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+    font-family: Dancing Script;
+    overflow: hidden;
+}
+.note:hover {
+  background-color: lavender;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+.note:before {
+  content: "What\0027s Inside? ⍨";
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+.note:hover::before {
+  visibility: hidden;
+}
+
+#note:hover::after {
+    content: "✤ Happiness begins where Ambition ends ✤";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: Brush Script MT;
+    font-size: 0.9rem;
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+#note{
+    margin-left: 20px;
+    padding: 60px;
+
+}
+#note1{
+    margin-left: -20px;
+    padding: 55px;
+}
+#note2{
+    margin-left: 20px;
+    padding: 50px;
+}
+#note3{
+    margin-left: -25px;
+    padding: 40px;
+}
+
+#note1:hover::after {
+  content: "❆ Embrace the Adventures of life❆";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Brush Script MT;
+  font-size: 0.85rem;
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+#note2:hover::after {
+  content: "⁂ Find comfort in Chaos ⁂";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Brush Script MT;
+  font-size: 0.8rem;
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+#note3:hover::after {
+  content: "✧ Trust the Process ✧";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Brush Script MT;
+  font-size: 0.8rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* end notes */
+
+#page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f4c8;
+}
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+#page2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+#page3{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+
+canvas{
+    position: relative;
+    z-index: 9;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+#loop{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    height: 25%;
+    width: 100%;
+    font-size: 110px;
+    white-space: nowrap;
+    font-family: gilroy;
+    overflow: hidden;
+}
+#loop>h4{
+    font-weight: 400;
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#loop>h4>span{
+    -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+    font-weight: 500;
+}
+@keyframes anim{
+    0%{
+        transform: translateX(60%);
+        -webkit-transform: translateX(60%);
+        -moz-transform: translateX(60%);
+        -ms-transform: translateX(60%);
+        -o-transform: translateX(60%);
+}
+    100%{
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
+}
+
+#loop {
+    background-color: rgba(133, 127, 127, 0.2); /* Temporary background for debugging */
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 100px;
+}
+#nav>h3{
+    color: lavender;
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 30px;
+}
+#nav>button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #0a0101;
+    color: #fff;
+    border: none;
+} 
+#page>h3{
+    position: absolute;
+    top: 50%;
+    padding: 40px;
+    font-family: gilroy;
+    font-weight: 500;
+    color: #433f3f;
+    left: 50%;
+}
+#page>h4{
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    font-family: gilroy;
+    font-weight: 500;
+}
+/* page1 */
+#page1>#left-text{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    text-align: center;
+}
+#page1>#left-text>h1{
+    top: 10%;
+    font-family: Brush Script MT;
+    font-size: 50px;
+    line-height: 1.5;
+    /* padding-right: 20px; */
+}
+#page1>#left-text>h2{
+    font-size: 20px;
+    line-height: 1.5;
+}
+#page1>#left-text>h3{
+    color: #7c7c7c;
+    font-weight: 400;
+}
+
+.skill-badges {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+}
+
+.badge {
+    padding: 10px 1px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.badge:hover {
+    background-color: #28692b;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(1, 3, 10, 0.8);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    max-width: 300px;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#page2>#text2{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    text-align: end;
+}
+
+
+#page3>#text3 {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    text-align: end;
+}
+#page3>#text3>h1{
+    text-align: center;
+}
+
+.exp-button {
+    background-color: #1d3a1e;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    font-family: 'gilroy', cursive;
+    transition: background-color 0.3s ease;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.exp-button:hover {
+    background-color: #0f4011;
+}
+
+.exp-details {
+    display: none;
+    flex-direction: column;
+    max-width: 300px;
+    height: 100%;
+    margin: 0px 100px;
+    padding: 10px;
+    background-color: #d5c9c9;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.exp-details p {
+    margin: 5px 0;
+}
+
+
+.footer {
+    color: #100808;
+    text-align: center; 
+    font-size: 2rem; 
+    letter-spacing: 3px; 
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5); 
+    position: fixed; 
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  .footer h2 {
+    margin: 0;
+    padding: 0;
+    transform: translateX(400px);
+    animation: fadeIn 3s ease-in-out;
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+    -webkit-animation: fadeIn 3s ease-in-out;
+}
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(700px);
+      -webkit-transform: translateX(700px);
+      -moz-transform: translateX(700px);
+      -ms-transform: translateX(700px);
+      -o-transform: translateX(700px);
+}
+    100% {
+      opacity: 1;
+      transform: translateX(400px);
+      -webkit-transform: translateX(400px);
+      -moz-transform: translateX(400px);
+      -ms-transform: translateX(400px);
+      -o-transform: translateX(400px);
+}
+  }
+  

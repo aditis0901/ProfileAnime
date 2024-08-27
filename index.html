@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div id="nav">
+      <h3>Hi <b>ADITI!</b></h3>
+      <button>August,2024</button>
+    </div>
+    <div class="sidebar">
+      <div class="quote" data-aos="flip-left" id="notes">
+        <div class="note" id="note"></div>
+        <div class="note" id="note1"></div>
+        <div class="note" id="note2"></div>
+        <div class="note" id="note3"></div>
+      </div>
+      <div class="gro">GROW BEYOND LIMITS</div>
+    </div>
+    <div id="main">
+      <div id="page">
+        <div id="loop">
+          <h4>
+            <b>HI_</b>THERE <b><i>GLAD</i></b> <span>YOU</span> LANDED
+            <span><i>HERE.</i></span>
+          </h4>
+        </div>
+        <h3>
+          And when I'm not in front of my laptop screen, you can find me <i>admiring
+          and exploring nature, brewing the perfect cup of coffee, weaving words into emotions through a pen, or maybe lost
+          in a good book.</i>
+        </h3>
+        <h4>...LET'S EXPLORE MORE ↓↓</h4>
+
+        <canvas></canvas>
+      </div>
+      <div id="page1">
+        <div id="left-text">
+          <h1>Hey!</h1>
+          <br><br>
+          <h3>
+           <b> WONDER WHY I'M HERE? </b>
+           <br>
+            <br />
+            TO CODE MY OWN STORY
+            <br />
+            TO TAKE THE CHANCE
+            <br />
+          </h3>
+          <h2>TO BUILD, LEARN AND EVOLVE</h2>
+          <h3>Rooted in simplicity and admiration  <br>
+            I pursue big dreams with dedication <br>
+            seeking inner peace while
+            <br>embracing life 
+            <br>to the fullest</h3>
+        </div>
+      </div>
+
+      <div id="page2" class="pg">
+        <div id="text2">
+          <h1>KEYS-<i><b>TO MY IMPACT</i></b></h1>
+          <br><br>
+          <div class="skill-badges">
+            <div class="badge" data-skill="C++/C">Programming</div>
+            <div class="badge" data-skill="Java">Web Development</div>
+            <div class="badge" data-skill="Python">ML/AI/NLP</div>
+            <div class="badge" data-skill="MySQL">Technology</div>
+            <div class="badge" data-skill="JavaScript">Core strengths</div>
+          </div>
+        </div>
+        <div id="tooltip" class="tooltip"></div>
+      </div>
+
+      <div id="page3">
+        <div id="text3">
+            <h1>EXPERIENCE - <i>Internship</i></h1>
+            <br />
+            <!-- PepsiCo Experience Button -->
+            <button class="exp-button" onclick="toggleExperience('pepsico-exp')">🚀 DATA ENGINEER @PepsiCo</button>
+            <div id="pepsico-exp" class="exp-details">
+                <p>January 2024 - July 2024</p>
+                <p><strong>Data Analytics & code modification</strong> Spearheaded global change requests with precision, utilizing PL/SQL to drive impactful modifications across diverse sectors.</p>
+                <p><strong>Technical Documentation</strong>worked on creating functional & technical specification documents for several supply chain operations
+                </p>
+            </div>
+            <button class="exp-button" onclick="toggleExperience('travelnex-exp')">🌐 WEB DEVELOPMENT TRAINEE @Travelnex</button>
+            <div id="travelnex-exp" class="exp-details">
+                <p>June 2023 - July 2023</p>
+                <p><strong>Travel Booking Form:</strong> Engineered the "Book Your Adventure" travel package booking form, delivering a seamless and intuitive interface for users to explore and book travel packages.</p>
+            </div>
+         </div>
+      </div>
+      <div id="page4">
+        <div id="text4">
+          <h4></h4>
+        </div>
+        <h3></h3>
+        <h4></h4>
+      </div>
+
+      <!-- fooooter -->
+      <footer class="footer">
+          <h2>ADIOS AMIGOS</h2>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
